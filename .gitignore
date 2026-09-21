@@ -1,0 +1,127 @@
+# ==============================================
+# ENVIRONMENT & SECRETS
+# ==============================================
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+*.cert
+
+# ==============================================
+# NODE.JS (Next.js + Medusa)
+# ==============================================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.pnpm-store/
+
+# Next.js
+.next/
+out/
+build/
+
+# Medusa
+.medusa/
+medusa-store/.cache/
+
+# ==============================================
+# PYTHON (Spark Jobs)
+# ==============================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+.Python
+.venv/
+venv/
+env/
+*.egg-info/
+dist/
+.eggs/
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+*.ipynb
+
+# ==============================================
+# DATA & STORAGE (NEVER commit data files)
+# ==============================================
+*.parquet
+*.delta
+*.orc
+*.avro
+*.csv
+data/
+local-data/
+minio-data/
+
+# Spark checkpoint directories
+spark-checkpoints/
+checkpoint/
+
+# ==============================================
+# DOCKER
+# ==============================================
+# Docker volumes (generated at runtime)
+volumes/
+
+# ==============================================
+# TERRAFORM
+# ==============================================
+infra/terraform/.terraform/
+infra/terraform/.terraform.lock.hcl
+infra/terraform/terraform.tfstate
+infra/terraform/terraform.tfstate.backup
+infra/terraform/*.tfvars
+infra/terraform/tfplan
+
+# ==============================================
+# JAVA / SCALA (Spark JARs)
+# ==============================================
+*.jar
+*.class
+target/
+
+# ==============================================
+# IDE & EDITORS
+# ==============================================
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+*.suo
+*.user
+
+# ==============================================
+# LOGS
+# ==============================================
+logs/
+*.log
+spark-logs/
+
+# ==============================================
+# TESTING
+# ==============================================
+coverage/
+.coverage
+htmlcov/
+.pytest_cache/
+.nyc_output/
+
+# ==============================================
+# KIBANA / ELASTICSEARCH
+# ==============================================
+infra/elasticsearch/data/
+infra/kibana/data/
+
+# ==============================================
+# MISC
+# ==============================================
+*.tmp
+*.temp
+.cache/
