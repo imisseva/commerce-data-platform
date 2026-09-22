@@ -15,8 +15,9 @@ services:
       POSTGRES_USER: medusa
       POSTGRES_PASSWORD: medusa_password
       POSTGRES_DB: medusa_db
+      POSTGRES_HOST_AUTH_METHOD: trust   # Dev only: bỏ qua password check
     ports:
-      - "5432:5432"           # Medusa local kết nối vào đây
+      - "5433:5432"           # Dùng 5433 vì 5432 đã bị PostgreSQL Windows chiếm
     volumes:
       - postgres_data:/var/lib/postgresql/data
     healthcheck:
